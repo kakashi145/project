@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Login Form</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>XYZ University</h1>
+        <h3>Login</h3>
+        <form action="login.php" method="POST">
+            <label for="first">
+                <img src="https://p7.hiclipart.com/preview/442/477/305/computer-icons-user-profile-avatar-profile-thumbnail.jpg" 
+                     alt="Username Icon" 
+                     style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+                Username:
+            </label>
+            <input type="text" 
+                   id="first" 
+                   name="first" 
+                   placeholder="Enter your Username" required>
+
+            <label for="password">
+                <img src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-vector-lock-icon-png-image_515444.jpg" 
+                     alt="Username Icon" 
+                     style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+                Password:
+            </label>
+            <input type="password" 
+                   id="password" 
+                   name="password" 
+                   placeholder="Enter your Password" required>
+
+            <div class="wrap">
+                <button type="submit" onclick="solve()">
+                    Log In
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

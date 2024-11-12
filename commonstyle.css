@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.top-bar {
+  background-color: #ffff;
+  color: black;
+  padding: 10px 15px;
+  /* Reduced padding to make the top bar smaller */
+  text-align: center;
+  font-size: 9px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.menu-icon {
+  position: absolute;
+  left: 15px;
+  /* Adjusted to align with new top bar height */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 70px;
+  left: 0;
+  background-color: #ffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #1e1e1e;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a.active {
+  background-color: #edfbfe;
+  color: #4ca29a;
+}
+
+.sidenav a:hover {
+  color: #d62d20;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
