@@ -1,44 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>HTML Login Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ University Login</title>
     <link rel="stylesheet" href="style1.css">
+    <style>
+        /* Global Styles */
+        body {
+            background-image: url('https://images.shiksha.com/mediadata/images/1707808316phpaXhAOP.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Main container styling */
+        .main {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Heading styling */
+        h1 {
+            color: #00274D;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #4F83CC;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Form label and input styling */
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Button styling */
+        .wrap {
+            text-align: center;
+        }
+
+        .wrap button {
+            background-color: #4F83CC;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .wrap button:hover {
+            background-color: #00274D;
+        }
+
+        /* Icon styling */
+        img.icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        /* Show Password styling */
+        .show-password {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #333;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+
+        .show-password input[type="checkbox"] {
+            transform: scale(1.1); /* Slightly larger checkbox for better visibility */
+        }
+    </style>
 </head>
 
 <body>
     <div class="main">
         <h1>XYZ University</h1>
-        <h3>Login</h3>
+        <h3>Login Page</h3>
         <form action="login.php" method="POST">
             <label for="first">
                 <img src="https://p7.hiclipart.com/preview/442/477/305/computer-icons-user-profile-avatar-profile-thumbnail.jpg" 
                      alt="Username Icon" 
-                     style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+                     class="icon">
                 Username:
             </label>
-            <input type="text" 
-                   id="first" 
-                   name="first" 
-                   placeholder="Enter your Username" required>
+            <input type="text" id="first" name="first" placeholder="Enter your Username" required>
 
             <label for="password">
                 <img src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-vector-lock-icon-png-image_515444.jpg" 
-                     alt="Username Icon" 
-                     style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+                     alt="Password Icon" 
+                     class="icon">
                 Password:
             </label>
-            <input type="password" 
-                   id="password" 
-                   name="password" 
-                   placeholder="Enter your Password" required>
+            <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+
+            <!-- Show Password Checkbox -->
+            <!--<div class="show-password">
+                <input type="checkbox" id="togglePassword">
+                <label for="togglePassword">Show Password</label>
+            </div>-->
 
             <div class="wrap">
-                <button type="submit" onclick="solve()">
-                    Log In
-                </button>
+                <button type="submit" onclick="solve()">Log In</button>
             </div>
         </form>
     </div>
+
+    <!-- JavaScript for Show Password functionality -->
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordField = document.getElementById('password');
+
+        togglePassword.addEventListener('change', function() {
+            // Toggle the type attribute between password and text
+            passwordField.type = this.checked ? 'text' : 'password';
+        });
+    </script>
 </body>
+
 </html>
